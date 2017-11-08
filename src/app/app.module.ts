@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { RouterModule} from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -12,12 +12,16 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
 
+import { ArticleComponent } from './article/article.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +29,7 @@ import { AboutComponent } from './about/about.component';
     RouterModule.forRoot(routes)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+   schemas:      [ NO_ERRORS_SCHEMA ]
 })
 export class AppModule { }
