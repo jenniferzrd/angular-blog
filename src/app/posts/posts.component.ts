@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
-interface Item {
+interface Items {
   name: string;
   img: string;
   resume: string;
 }
 
-const ITEMS = [
+const ITEMS : Items [] = [
   {name: 'Le pompon is coming', img:'../assets/images/bonnet_winter.jpg', resume: "Hodor hodor, hodor. Hodor hodor hodor hodor, hodor, hodor hodor. Hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor. Hodor. Hodor! Hodor hodor, hodor; hodor hodor - hodor?! Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?!"},
   {name: 'Il est frais mon melon', img:'../assets/images/chapeau_melon.jpg', resume: "Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus sit​​, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium."},
   {name: 'Woody m\'a dit que j\'peux', img:'../assets/images/chapeau_large.jpg', resume: "Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an Undead zombies. Sicut malus movie horror."},
@@ -25,12 +25,17 @@ const ITEMS = [
 export class PostsComponent implements OnInit {
 
 
-items = ITEMS;
+items: Items[];
+search: string;
 
-  constructor() { }
+  constructor() { 
+
+    this.search = '';
+    this.items = ITEMS;
+
+  }
 
   ngOnInit() {
-    this.items = ITEMS;
   }
 
 }

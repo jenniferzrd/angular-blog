@@ -15,8 +15,10 @@
     </div> -->
 
 <!-- </app-article> -->
+{{ search }}
 
-<card *ngFor="let item of items">
+<input type="text" [(ngModel)]="search">
+<card *ngFor="let item of (items | filter: search)">
   <div card-header class="header">
     <img src="{{ item.img }}" alt="photo_article">
     <div class="texte_article">

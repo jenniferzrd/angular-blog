@@ -13,7 +13,7 @@ import { AboutComponent } from './about/about.component';
 
 
 import { ArticleComponent } from './article/article.component';
-import { FilterPipe } from './filter.pipe';
+import { FilterPipe } from './pipe/filter.pipe';
 
 
 @NgModule({
