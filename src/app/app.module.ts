@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 
 
 import { ArticleComponent } from './article/article.component';
+import { FilterPipe } from './filter.pipe';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ArticleComponent } from './article/article.component';
     PostsComponent,
     HomeComponent,
     AboutComponent,
-    ArticleComponent
+    ArticleComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

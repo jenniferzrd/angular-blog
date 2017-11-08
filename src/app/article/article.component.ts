@@ -1,5 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+export class Item {
+  name: string;
+  img: string;
+}
+
+
 @Component({
   moduleId: module.id,
   selector: 'app-article',
@@ -10,9 +16,10 @@ export class ArticleComponent implements OnInit {
 
   @Input() public header: string = 'this is header';
 
-  constructor() { }
+constructor() { }
 
   ngOnInit() {
+  
   }
 
 }

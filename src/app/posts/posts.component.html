@@ -1,8 +1,8 @@
 <p>
   posts works!
 </p>
-<app-article>
-  <div class="card-block">
+<!-- <app-article> -->
+<!-- <div class="card-block">
     <p> Article numero 1</p>
     <h4 class="card-title">Ici s'affichera le titre de mon article</h4>
     <p class="card-text">Ici s'affichera le contenu de mon article</p>
@@ -12,8 +12,16 @@
       <p> Article numero 2</p>
       <h4 class="card-title">Ici s'affichera le titre de mon article</h4>
       <p class="card-text">Ici s'affichera le contenu de mon article</p>
+    </div> -->
+
+<!-- </app-article> -->
+
+<card *ngFor="let item of items">
+  <div card-header class="header">
+    <img src="{{ item.img }}" alt="photo_article">
+    <div class="texte_article">
+      <h3> {{ item.name }} </h3>
+      <p>{{ item.resume }}</p>
     </div>
-
-</app-article>
-
-  
+  </div>
+</card>
