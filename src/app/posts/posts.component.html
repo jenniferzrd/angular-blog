@@ -1,23 +1,7 @@
-<p>
-  posts works!
-</p>
-<!-- <app-article> -->
-<!-- <div class="card-block">
-    <p> Article numero 1</p>
-    <h4 class="card-title">Ici s'affichera le titre de mon article</h4>
-    <p class="card-text">Ici s'affichera le contenu de mon article</p>
-  </div>
-
-  <div class="card-block2">
-      <p> Article numero 2</p>
-      <h4 class="card-title">Ici s'affichera le titre de mon article</h4>
-      <p class="card-text">Ici s'affichera le contenu de mon article</p>
-    </div> -->
-
-<!-- </app-article> -->
-{{ search }}
-
-<input type="text" [(ngModel)]="search">
+<div class="posts">
+<input type="text" [(ngModel)]="search" placeholder="Rechercher un article"> 
+<button>Trier mes articles par ordre croissant</button>
+<!-- <button (click)="order =! order">Trier mes articles par ordre croissant</button> -->
 <card *ngFor="let item of (items | filter: search)">
   <div card-header class="header">
     <img src="{{ item.img }}" alt="photo_article">
@@ -27,3 +11,14 @@
     </div>
   </div>
 </card>
+</div>
+
+<!-- <div *ngFor="let item of (items | filterDate: order)"></div> -->
+<!-- Dans ma pipe je lui mets en value items, transform (items, order)
+return item sort (a, b) => { 
+  if (order) {
+    a>b
+  } else a < b 
+}  -->
+
+<!-- this.order = true; -->

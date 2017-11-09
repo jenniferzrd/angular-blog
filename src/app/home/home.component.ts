@@ -8,16 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class AboutHomeComponent { }
 @Component({
   selector: 'app-home',
-  // templateUrl: './home.component.html',
-  // styleUrls: ['./home.component.css']
-  template: `
-  <h2>Home</h2>
-  <a [routerLink]="['/about']">About</a>
-  <a [routerLink]="['/posts']">Posts</a>
-  <div class="inner-outlet">
-    <router-outlet></router-outlet>
-  </div>
-`
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
+//   template: `
+//   <h2>Home</h2>
+//   <a [routerLink]="['/about']">About</a>
+//   <a [routerLink]="['/posts']">Posts</a>
+//   <div class="inner-outlet">
+//     <router-outlet></router-outlet>
+//   </div>
+// `
 })
 export class HomeComponent implements OnInit {
 
