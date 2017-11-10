@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { RouterModule} from '@angular/router';
-import { FormsModule } from '@angular/forms';
 import { routes } from './app.routes';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -14,6 +14,7 @@ import { AboutComponent } from './about/about.component';
 
 import { ArticleComponent } from './article/article.component';
 import { FilterPipe } from './pipe/filter.pipe';
+import { FilterDatePipe } from './pipe/filter-date.pipe';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FilterPipe } from './pipe/filter.pipe';
     HomeComponent,
     AboutComponent,
     ArticleComponent,
-    FilterPipe
+    FilterPipe,
+    FilterDatePipe
   ],
   imports: [
     BrowserModule,

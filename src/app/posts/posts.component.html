@@ -1,13 +1,15 @@
 <div class="posts">
 <input type="text" [(ngModel)]="search" placeholder="Rechercher un article"> 
-<button>Trier mes articles par ordre croissant</button>
-<!-- <button (click)="order =! order">Trier mes articles par ordre croissant</button> -->
-<card *ngFor="let item of (items | filter: search)">
+<!-- <button>Trier mes articles par ordre croissant</button> -->
+<button (click)="order = !order">Trier mes articles par ordre croissant</button>
+
+<card *ngFor="let item of (items | filter: search | filterDate: order)">
   <div card-header class="header">
     <img src="{{ item.img }}" alt="photo_article">
     <div class="texte_article">
       <h3> {{ item.name }} </h3>
       <p>{{ item.resume }}</p>
+      {{ item.date }}
     </div>
   </div>
 </card>
